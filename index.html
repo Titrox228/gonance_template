@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/favicon.ico" type="image/jpg">
+    <link rel="stylesheet" href="css/font/stylesheet.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Gonance - trading graphics</title>
+</head>
+<body>
+    <header>
+        <div class="burger">
+            <div class="burger-btn"></div>
+        </div>
+        <div id="authent" class="authent">
+            <button style="cursor:pointer;" onclick="document.getElementById('authent').classList.remove('active-modal')" id="close-form">
+                <svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="40px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g class="st2" id="cross"><g class="st0"><line class="st1" x1="112.5" x2="401" y1="112.5" y2="401"/><line class="st1" x1="401" x2="112.5" y1="112.5" y2="401"/></g></g><g id="cross_copy"><path d="M268.064,256.75l138.593-138.593c3.124-3.124,3.124-8.189,0-11.313c-3.125-3.124-8.189-3.124-11.314,0L256.75,245.436   L118.157,106.843c-3.124-3.124-8.189-3.124-11.313,0c-3.125,3.124-3.125,8.189,0,11.313L245.436,256.75L106.843,395.343   c-3.125,3.125-3.125,8.189,0,11.314c1.562,1.562,3.609,2.343,5.657,2.343s4.095-0.781,5.657-2.343L256.75,268.064l138.593,138.593   c1.563,1.562,3.609,2.343,5.657,2.343s4.095-0.781,5.657-2.343c3.124-3.125,3.124-8.189,0-11.314L268.064,256.75z"/></g></svg></button>
+            <div></div>
+            <form class="authent__form" action="">
+                <h3 class="authent__title">Войти в аккаунт</h3>
+                <input class="authent__element nonactive-input" type="text" name="login" id="login">
+                <span class="authent__element">Логин или email</span>
+                <input class="authent__element nonactive-input" type="password" name="pass" id="pass">
+                <span class="authent__element">Пароль</span>
+                <a href="#" class="authent__link">Забыли пароль?</a>
+                <div class="login__container">
+                    <div class="login_checkbox">	
+                        <input class="authent__rmbm" type="checkbox" name="remember-me" id="rmbm">
+                        <label for="rmbm">Запомнить</label>
+                    </div>
+                    <input class="authent__submit" type="submit" value="Войти" id="sub">
+                </div>
+            </form>
+            <div class="notreg">
+                <hr class="notreg__hr">
+                <p class="notreg__text">Ещё не зарегистрировались? <a href="#" class="notreg__link">Регистрация</a></p>
+            </div>
+        </div>
+        <nav class="top__nav" id="top__nav">
+            <div class="block__left first">
+                <a href="#"><img src="https://via.placeholder.com/200x60" alt="gonance logo" class="logo"></a>
+            </div>
+            <div class="block__right second">
+                <div class="right__element"><a href="#" class="r_element">Графики</a></div>
+                <div class="right__element"><a href="#" class="r_element">Фьючерсы</a></div>
+                <div class="right__element"><a href="#" class="r_element">О нас</a></div>
+            </div>
+            <div class="block__right third">
+                <div class="right__element box second"><a href="#" class="r_element ">Регистрация</a></div>
+                <div id="auth" class="right__element auth first">
+                    <a href="#" class="r_element">Вход</a>
+                </div>
+                <div class="right__element profile">
+                    <div class="profile__cont">
+                        <a href="#" class="r_element">Профиль</a>
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"  viewBox="0 0 284.929 284.929" style="enable-background:new 0 0 284.929 284.929;" xml:space="preserve">
+                            <g><path style="fill:black;" d="M282.082,76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856c-2.471,0-4.661,0.95-6.563,2.856L142.466,174.441 L30.262,62.241c-1.903-1.906-4.093-2.856-6.567-2.856c-2.475,0-4.665,0.95-6.567,2.856L2.856,76.515C0.95,78.417,0,80.607,0,83.082 c0,2.473,0.953,4.663,2.856,6.565l133.043,133.046c1.902,1.903,4.093,2.854,6.567,2.854s4.661-0.951,6.562-2.854L282.082,89.647 c1.902-1.903,2.847-4.093,2.847-6.565C284.929,80.607,283.984,78.417,282.082,76.511z"/></g></svg>                            
+                    </div>
+                    <div class="profile__modal">
+                        <a href="#" class="profile__element">История</a>
+                        <a href="#" class="profile__element">Избранное</a>
+                        <a href="#" class="profile__element">Настройки</a>
+                        <a href="#" class="profile__element logout">Выйти</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="shadow"></div>
+    </header>
+    <div class="workarea">
+        <div class="article">
+            <h1 class="article__title">Изучай популярные графики прямо сейчас</h1>
+            <form action="" class="search__graphics" method="get">
+                <input type="text" placeholder="Поиск графиков" id="search" class="search__input">   
+                <svg version="1.1" class="search__img"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 183.792 183.792" style="enable-background:new 0 0 183.792 183.792;" xml:space="preserve">
+                <path d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22
+                c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583
+                c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0
+                C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806
+                c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25
+                c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"/></svg>
+                <input type="submit" class="search__submit" id="seach_submit" value="">
+            </form>
+            <div class="graphics">
+                <a href="#" class="graphic">
+                    <img src="../images/svg_normal/weapon_awp.svg" width="80px" height="30px" alt="" class="graphic__image">
+                    <div class="graphic__title">AWP Dragon Lore                    
+                        <div class="grapic__slider">
+                            <div class="under__slider dn">
+                                <div class="slider__item">-</div>
+                                <div class="slider__item">12680.98 ₽</div>   
+                            </div>
+                            <div class="under__slider">
+                                <div class="slider__item">-</div>
+                                <div class="slider__item"><span class="gcolor">+12.09%</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="#" class="graphic">
+                    <img src="../images/svg_normal/weapon_mac10.svg" width="80px" height="30px" alt="" class="graphic__image">
+                    <div class="graphic__title">MAC-10 Hyper Beast
+                        <div class="grapic__slider">
+                            <div class="under__slider dn">
+                                <div class="slider__item">-</div>
+                                <div class="slider__item">6059.5 ₽</div>   
+                            </div>
+                            <div class="under__slider">
+                                <div class="slider__item">-</div>
+                                <div class="slider__item"><span class="rcolor">-5.09%</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+                <a href="#" class="graphic">
+                    <img src="../images/svg_normal/weapon_ak47.svg" width="80px" height="30px" alt="" class="graphic__image">
+                    <div class="graphic__title">AK-47 African Mesh
+                        <div class="grapic__slider">
+                            <div class="under__slider dn">
+                                <div class="slider__item">-</div>
+                                <div class="slider__item">16.98 ₽</div>   
+                            </div>
+                            <div class="under__slider">
+                                <div class="slider__item">-</div>
+                                <div class="slider__item"><span class="rcolor">-10.12%</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+            </div>
+        </div>
+        <div class="analytics">
+            <h2 class="analytics__title">Аналитика от пользователей</h2>
+            <div class="analytics__blocks">
+                <div class="analytics__block">
+                    <div class="analytics__block-title">Цена на Драгон Лор не поднимется выше 12000$</div>
+                    <div class="block__itemname">AWP Dragon Lore | После полевых испытаний</div>
+                    <img decoding="async" loading="lazy" width="100%" src="images/post_example.webp" alt="">
+                    <div class="block__userwrapper">
+                        <div class="user">
+                            <img width="26px" height="26px" src="https://via.placeholder.com/26x26" alt="" class="block__avatar">
+                            <div class="block__username">Titrox228</div>
+                        </div>
+                        <div class="block__date">3 часа назад</div>
+                    </div>
+                    <div class="block__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, autem blanditiis nobis aut voluptate quas amet explicabo quis cupiditate ullam fuga voluptatum consequuntur nostrum nihil sint laboriosam quisquam eos earum!123123123123123
+                    </div>
+                    <div class="block__social">
+                        <div class="block__like">
+                            <svg width="18px" height="18px" class="block__img" version="1.1"   x="0px" y="0px"
+                                    viewBox="0 0 535.578 535.578" style="enable-background:new 0 0 535.578 535.578;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path d="M113.531,481.583c0,29.818-5.372,53.995-11.998,53.995H44.537c-6.627,0-11.998-24.177-11.998-53.995V225.108
+                                                c0-29.821,5.372-53.995,11.998-53.995h56.996c6.626,0,11.998,24.175,11.998,53.995V481.583z"/>
+                                            <path d="M449.048,161.984h-69.266c1.116-4.322,1.771-8.828,1.771-13.499v-94.49C381.553,24.174,357.378,0,327.558,0
+                                                l-67.494,148.486c0,4.671-121.489,37.673-121.489,67.494v256.475c0,29.816,24.173,53.995,53.995,53.995h256.476
+                                                c29.821,0,53.994-24.179,53.994-53.995V215.979C503.042,186.159,478.869,161.984,449.048,161.984z"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div class="block__like-amount">0</div>
+                        </div>
+                        <div class="block__comments">
+                            <svg width="28px" height="28px" style="" class="block__img" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M170.476,166.19h155.097c4.285,0,7.76-3.469,7.76-7.754s-3.475-7.765-7.76-7.765H170.476c-4.285,0-7.754,3.48-7.754,7.765  S166.191,166.19,170.476,166.19z"/><path d="M348.088,203.362H202.74c-4.284,0-7.759,3.469-7.759,7.754s3.475,7.765,7.759,7.765h145.348c4.284,0,7.754-3.48,7.754-7.765  S352.372,203.362,348.088,203.362z"/><path d="M306.695,256.052H170.476c-4.285,0-7.754,3.469-7.754,7.754c0,4.284,3.469,7.754,7.754,7.754h136.219  c4.279,0,7.754-3.47,7.754-7.754C314.448,259.521,310.974,256.052,306.695,256.052z"/><path d="M396.776,86.288H115.225c-29.992,0-54.403,22.562-54.403,50.308v154.83c0,27.735,24.411,50.297,54.403,50.297h166.034  l119.812,83.989v-84.135c27.996-2.038,50.108-23.753,50.108-50.151v-154.83C451.179,108.85,426.768,86.288,396.776,86.288z   M427.906,291.426c0,14.902-13.972,27.025-31.131,27.025h-18.978v62.523l-89.193-62.523h-173.38  c-17.164,0-31.131-12.123-31.131-27.025v-154.83c0-14.913,13.967-27.035,31.131-27.035h281.551  c17.159,0,31.131,12.123,31.131,27.035V291.426z"/></svg>
+                            <div class="block__comments-amount">3</div>
+                        </div>
+                        <div class="share__modal">
+                            <input type="text" link-attr="https://www.xhamster.com/" class="share__link">
+                            <svg version="1.1" class="share__link-copy" x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                <g>
+                                    <path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228
+                                        C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999
+                                        c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64
+                                        h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002
+                                        C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228
+                                        c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999
+                                        c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z
+                                        M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699
+                                        c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946
+                                        c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999
+                                        h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z"/>
+                                    <path d="M38.6031494,13.2063999H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0158005
+                                        c0,0.5615997,0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4542999,1.0158997-1.0158997
+                                        C39.6190491,13.6606998,39.16465,13.2063999,38.6031494,13.2063999z"/>
+                                    <path d="M38.6031494,21.3334007H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0157986
+                                        c0,0.5615005,0.4544001,1.0159016,1.0159006,1.0159016h22.3491974c0.5615005,0,1.0158997-0.454401,1.0158997-1.0159016
+                                        C39.6190491,21.7877007,39.16465,21.3334007,38.6031494,21.3334007z"/>
+                                    <path d="M38.6031494,29.4603004H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+                                        s0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4543991,1.0158997-1.0158997
+                                        S39.16465,29.4603004,38.6031494,29.4603004z"/>
+                                    <path d="M28.4444485,37.5872993H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+                                        s0.4544001,1.0158997,1.0159006,1.0158997h12.1904964c0.5615025,0,1.0158005-0.4543991,1.0158005-1.0158997
+                                        S29.0059509,37.5872993,28.4444485,37.5872993z"/>
+                                </g>
+                                </svg>
+                        </div>
+                        <svg fill="#000000" class="share__img" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 18 2 A 3 3 0 0 0 15 5 A 3 3 0 0 0 15.054688 5.5605469 L 7.9394531 9.7109375 A 3 3 0 0 0 6 9 A 3 3 0 0 0 3 12 A 3 3 0 0 0 6 15 A 3 3 0 0 0 7.9355469 14.287109 L 15.054688 18.439453 A 3 3 0 0 0 15 19 A 3 3 0 0 0 18 22 A 3 3 0 0 0 21 19 A 3 3 0 0 0 18 16 A 3 3 0 0 0 16.0625 16.712891 L 8.9453125 12.560547 A 3 3 0 0 0 9 12 A 3 3 0 0 0 8.9453125 11.439453 L 16.060547 7.2890625 A 3 3 0 0 0 18 8 A 3 3 0 0 0 21 5 A 3 3 0 0 0 18 2 z"/></svg>
+                        <svg class="favourites__img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="459px" height="459px" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve">
+                        <g><g id="bookmark"><path d="M357,0H102C73.95,0,51,22.95,51,51v408l178.5-76.5L408,459V51C408,22.95,385.05,0,357,0z"/></g></g></svg>
+                    </div>
+                </div>               
+                <div class="analytics__block">
+                    <div class="analytics__block-title">Цена на Драгон Лор не поднимется выше 12000$</div>
+                    <div class="block__itemname">AWP Dragon Lore | После полевых испытаний</div>
+                    <img decoding="async" loading="lazy" width="100%" src="images/post_example.webp" alt="">
+                    <div class="block__userwrapper">
+                        <div class="user">
+                            <img width="26px" height="26px" src="https://via.placeholder.com/26x26" alt="" class="block__avatar">
+                            <div class="block__username">Titrox228</div>
+                        </div>
+                        <div class="block__date">3 часа назад</div>
+                    </div>
+                    <div class="block__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, autem blanditiis nobis aut voluptate quas amet explicabo quis cupiditate ullam fuga voluptatum consequuntur nostrum nihil sint laboriosam quisquam eos earum!123123123123123
+                    </div>
+                    <div class="block__social">
+                        <div class="block__like">
+                            <svg width="18px" height="18px" class="block__img" version="1.1"   x="0px" y="0px"
+                                    viewBox="0 0 535.578 535.578" style="enable-background:new 0 0 535.578 535.578;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path d="M113.531,481.583c0,29.818-5.372,53.995-11.998,53.995H44.537c-6.627,0-11.998-24.177-11.998-53.995V225.108
+                                                c0-29.821,5.372-53.995,11.998-53.995h56.996c6.626,0,11.998,24.175,11.998,53.995V481.583z"/>
+                                            <path d="M449.048,161.984h-69.266c1.116-4.322,1.771-8.828,1.771-13.499v-94.49C381.553,24.174,357.378,0,327.558,0
+                                                l-67.494,148.486c0,4.671-121.489,37.673-121.489,67.494v256.475c0,29.816,24.173,53.995,53.995,53.995h256.476
+                                                c29.821,0,53.994-24.179,53.994-53.995V215.979C503.042,186.159,478.869,161.984,449.048,161.984z"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div class="block__like-amount">0</div>
+                        </div>
+                        <div class="block__comments">
+                            <svg width="28px" height="28px" style="" class="block__img" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M170.476,166.19h155.097c4.285,0,7.76-3.469,7.76-7.754s-3.475-7.765-7.76-7.765H170.476c-4.285,0-7.754,3.48-7.754,7.765  S166.191,166.19,170.476,166.19z"/><path d="M348.088,203.362H202.74c-4.284,0-7.759,3.469-7.759,7.754s3.475,7.765,7.759,7.765h145.348c4.284,0,7.754-3.48,7.754-7.765  S352.372,203.362,348.088,203.362z"/><path d="M306.695,256.052H170.476c-4.285,0-7.754,3.469-7.754,7.754c0,4.284,3.469,7.754,7.754,7.754h136.219  c4.279,0,7.754-3.47,7.754-7.754C314.448,259.521,310.974,256.052,306.695,256.052z"/><path d="M396.776,86.288H115.225c-29.992,0-54.403,22.562-54.403,50.308v154.83c0,27.735,24.411,50.297,54.403,50.297h166.034  l119.812,83.989v-84.135c27.996-2.038,50.108-23.753,50.108-50.151v-154.83C451.179,108.85,426.768,86.288,396.776,86.288z   M427.906,291.426c0,14.902-13.972,27.025-31.131,27.025h-18.978v62.523l-89.193-62.523h-173.38  c-17.164,0-31.131-12.123-31.131-27.025v-154.83c0-14.913,13.967-27.035,31.131-27.035h281.551  c17.159,0,31.131,12.123,31.131,27.035V291.426z"/></svg>
+                            <div class="block__comments-amount">3</div>
+                        </div>
+                        <div class="share__modal">
+                            <input link-attr="https://www.xvideos.com/" type="text" class="share__link">
+                            <svg version="1.1" class="share__link-copy" x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                <g>
+                                    <path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228
+                                        C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999
+                                        c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64
+                                        h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002
+                                        C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228
+                                        c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999
+                                        c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z
+                                        M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699
+                                        c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946
+                                        c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999
+                                        h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z"/>
+                                    <path d="M38.6031494,13.2063999H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0158005
+                                        c0,0.5615997,0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4542999,1.0158997-1.0158997
+                                        C39.6190491,13.6606998,39.16465,13.2063999,38.6031494,13.2063999z"/>
+                                    <path d="M38.6031494,21.3334007H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0157986
+                                        c0,0.5615005,0.4544001,1.0159016,1.0159006,1.0159016h22.3491974c0.5615005,0,1.0158997-0.454401,1.0158997-1.0159016
+                                        C39.6190491,21.7877007,39.16465,21.3334007,38.6031494,21.3334007z"/>
+                                    <path d="M38.6031494,29.4603004H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+                                        s0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4543991,1.0158997-1.0158997
+                                        S39.16465,29.4603004,38.6031494,29.4603004z"/>
+                                    <path d="M28.4444485,37.5872993H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+                                        s0.4544001,1.0158997,1.0159006,1.0158997h12.1904964c0.5615025,0,1.0158005-0.4543991,1.0158005-1.0158997
+                                        S29.0059509,37.5872993,28.4444485,37.5872993z"/>
+                                </g>
+                            </svg>
+                        </div>
+                        <svg fill="#000000" class="share__img" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 18 2 A 3 3 0 0 0 15 5 A 3 3 0 0 0 15.054688 5.5605469 L 7.9394531 9.7109375 A 3 3 0 0 0 6 9 A 3 3 0 0 0 3 12 A 3 3 0 0 0 6 15 A 3 3 0 0 0 7.9355469 14.287109 L 15.054688 18.439453 A 3 3 0 0 0 15 19 A 3 3 0 0 0 18 22 A 3 3 0 0 0 21 19 A 3 3 0 0 0 18 16 A 3 3 0 0 0 16.0625 16.712891 L 8.9453125 12.560547 A 3 3 0 0 0 9 12 A 3 3 0 0 0 8.9453125 11.439453 L 16.060547 7.2890625 A 3 3 0 0 0 18 8 A 3 3 0 0 0 21 5 A 3 3 0 0 0 18 2 z"/></svg>
+                        <svg class="favourites__img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="459px" height="459px" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve">
+                        <g><g id="bookmark"><path d="M357,0H102C73.95,0,51,22.95,51,51v408l178.5-76.5L408,459V51C408,22.95,385.05,0,357,0z"/></g></g></svg>
+                    </div>
+                </div>               
+                <div class="analytics__block">
+                    <div class="analytics__block-title">Цена на Драгон Лор не поднимется выше 12000$</div>
+                    <div class="block__itemname">AWP Dragon Lore | После полевых испытаний</div>
+                    <img decoding="async" loading="lazy" width="100%" src="images/post_example.webp" alt="">
+                    <div class="block__userwrapper">
+                        <div class="user">
+                            <img width="26px" height="26px" src="https://via.placeholder.com/26x26" alt="" class="block__avatar">
+                            <div class="block__username">Titrox228</div>
+                        </div>
+                        <div class="block__date">3 часа назад</div>
+                    </div>
+                    <div class="block__text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, autem blanditiis nobis aut voluptate quas amet explicabo quis cupiditate ullam fuga voluptatum consequuntur nostrum nihil sint laboriosam quisquam eos earum!123123123123123
+                    </div>
+                    <div class="block__social">
+                        <div class="block__like">
+                            <svg width="18px" height="18px" class="block__img" version="1.1"   x="0px" y="0px"
+                                    viewBox="0 0 535.578 535.578" style="enable-background:new 0 0 535.578 535.578;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path d="M113.531,481.583c0,29.818-5.372,53.995-11.998,53.995H44.537c-6.627,0-11.998-24.177-11.998-53.995V225.108
+                                                c0-29.821,5.372-53.995,11.998-53.995h56.996c6.626,0,11.998,24.175,11.998,53.995V481.583z"/>
+                                            <path d="M449.048,161.984h-69.266c1.116-4.322,1.771-8.828,1.771-13.499v-94.49C381.553,24.174,357.378,0,327.558,0
+                                                l-67.494,148.486c0,4.671-121.489,37.673-121.489,67.494v256.475c0,29.816,24.173,53.995,53.995,53.995h256.476
+                                                c29.821,0,53.994-24.179,53.994-53.995V215.979C503.042,186.159,478.869,161.984,449.048,161.984z"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                            <div class="block__like-amount">0</div>
+                        </div>
+                        <div class="block__comments">
+                            <svg width="28px" height="28px" style="" class="block__img" enable-background="new 0 0 512 512" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M170.476,166.19h155.097c4.285,0,7.76-3.469,7.76-7.754s-3.475-7.765-7.76-7.765H170.476c-4.285,0-7.754,3.48-7.754,7.765  S166.191,166.19,170.476,166.19z"/><path d="M348.088,203.362H202.74c-4.284,0-7.759,3.469-7.759,7.754s3.475,7.765,7.759,7.765h145.348c4.284,0,7.754-3.48,7.754-7.765  S352.372,203.362,348.088,203.362z"/><path d="M306.695,256.052H170.476c-4.285,0-7.754,3.469-7.754,7.754c0,4.284,3.469,7.754,7.754,7.754h136.219  c4.279,0,7.754-3.47,7.754-7.754C314.448,259.521,310.974,256.052,306.695,256.052z"/><path d="M396.776,86.288H115.225c-29.992,0-54.403,22.562-54.403,50.308v154.83c0,27.735,24.411,50.297,54.403,50.297h166.034  l119.812,83.989v-84.135c27.996-2.038,50.108-23.753,50.108-50.151v-154.83C451.179,108.85,426.768,86.288,396.776,86.288z   M427.906,291.426c0,14.902-13.972,27.025-31.131,27.025h-18.978v62.523l-89.193-62.523h-173.38  c-17.164,0-31.131-12.123-31.131-27.025v-154.83c0-14.913,13.967-27.035,31.131-27.035h281.551  c17.159,0,31.131,12.123,31.131,27.035V291.426z"/></svg>
+                            <div class="block__comments-amount">3</div>
+                        </div>
+                        <div class="share__modal">
+                            <input link-attr="https://www.pornhub.com/" type="text" class="share__link">
+                            <svg version="1.1" class="share__link-copy" x="0px" y="0px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve">
+                                <g>
+                                    <path d="M53.9791489,9.1429005H50.010849c-0.0826988,0-0.1562004,0.0283995-0.2331009,0.0469999V5.0228
+                                        C49.7777481,2.253,47.4731483,0,44.6398468,0h-34.422596C7.3839517,0,5.0793519,2.253,5.0793519,5.0228v46.8432999
+                                        c0,2.7697983,2.3045998,5.0228004,5.1378999,5.0228004h6.0367002v2.2678986C16.253952,61.8274002,18.4702511,64,21.1954517,64
+                                        h32.783699c2.7252007,0,4.9414978-2.1725998,4.9414978-4.8432007V13.9861002
+                                        C58.9206467,11.3155003,56.7043495,9.1429005,53.9791489,9.1429005z M7.1110516,51.8661003V5.0228
+                                        c0-1.6487999,1.3938999-2.9909999,3.1062002-2.9909999h34.422596c1.7123032,0,3.1062012,1.3422,3.1062012,2.9909999v46.8432999
+                                        c0,1.6487999-1.393898,2.9911003-3.1062012,2.9911003h-34.422596C8.5049515,54.8572006,7.1110516,53.5149002,7.1110516,51.8661003z
+                                        M56.8888474,59.1567993c0,1.550602-1.3055,2.8115005-2.9096985,2.8115005h-32.783699
+                                        c-1.6042004,0-2.9097996-1.2608986-2.9097996-2.8115005v-2.2678986h26.3541946
+                                        c2.8333015,0,5.1379013-2.2530022,5.1379013-5.0228004V11.1275997c0.0769005,0.0186005,0.1504021,0.0469999,0.2331009,0.0469999
+                                        h3.9682999c1.6041985,0,2.9096985,1.2609005,2.9096985,2.8115005V59.1567993z"/>
+                                    <path d="M38.6031494,13.2063999H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0158005
+                                        c0,0.5615997,0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4542999,1.0158997-1.0158997
+                                        C39.6190491,13.6606998,39.16465,13.2063999,38.6031494,13.2063999z"/>
+                                    <path d="M38.6031494,21.3334007H16.253952c-0.5615005,0-1.0159006,0.4542999-1.0159006,1.0157986
+                                        c0,0.5615005,0.4544001,1.0159016,1.0159006,1.0159016h22.3491974c0.5615005,0,1.0158997-0.454401,1.0158997-1.0159016
+                                        C39.6190491,21.7877007,39.16465,21.3334007,38.6031494,21.3334007z"/>
+                                    <path d="M38.6031494,29.4603004H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+                                        s0.4544001,1.0158997,1.0159006,1.0158997h22.3491974c0.5615005,0,1.0158997-0.4543991,1.0158997-1.0158997
+                                        S39.16465,29.4603004,38.6031494,29.4603004z"/>
+                                    <path d="M28.4444485,37.5872993H16.253952c-0.5615005,0-1.0159006,0.4543991-1.0159006,1.0158997
+                                        s0.4544001,1.0158997,1.0159006,1.0158997h12.1904964c0.5615025,0,1.0158005-0.4543991,1.0158005-1.0158997
+                                        S29.0059509,37.5872993,28.4444485,37.5872993z"/>
+                                </g>
+                                </svg>
+                        </div>
+                        <svg fill="#000000" class="share__img" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="24px" height="24px"><path d="M 18 2 A 3 3 0 0 0 15 5 A 3 3 0 0 0 15.054688 5.5605469 L 7.9394531 9.7109375 A 3 3 0 0 0 6 9 A 3 3 0 0 0 3 12 A 3 3 0 0 0 6 15 A 3 3 0 0 0 7.9355469 14.287109 L 15.054688 18.439453 A 3 3 0 0 0 15 19 A 3 3 0 0 0 18 22 A 3 3 0 0 0 21 19 A 3 3 0 0 0 18 16 A 3 3 0 0 0 16.0625 16.712891 L 8.9453125 12.560547 A 3 3 0 0 0 9 12 A 3 3 0 0 0 8.9453125 11.439453 L 16.060547 7.2890625 A 3 3 0 0 0 18 8 A 3 3 0 0 0 21 5 A 3 3 0 0 0 18 2 z"/></svg>
+                        <svg class="favourites__img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="459px" height="459px" viewBox="0 0 459 459" style="enable-background:new 0 0 459 459;" xml:space="preserve">
+                        <g><g id="bookmark"><path d="M357,0H102C73.95,0,51,22.95,51,51v408l178.5-76.5L408,459V51C408,22.95,385.05,0,357,0z"/></g></g></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer__wrapper">
+            <div class="wrapper__maininfo">
+                <img src="https://via.placeholder.com/200x60" alt="" class="footer__logo">
+                <div class="footer__contacts">
+                    <a href="#">
+                        <svg class="contacts__svg vk" style="enable-background:new 0 0 64 64;" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><style type="text/css">
+                        .st0{fill:#4267B2;}
+                        .st1{fill:url(#SVGID_1_);}
+                        .st2{fill:#FFFFFF;}
+                        .st3{fill:#C2191E;}
+                        .st4{fill:#1DA1F3;}
+                        .st5{fill:#FEFE00;}
+                        .st6{fill:#25D366;stroke:#FFFFFF;stroke-width:5;stroke-miterlimit:10;}
+                        .st7{fill:#CB2027;}
+                        .st8{fill:#0077B5;}
+                        .st9{fill:url(#SVGID_2_);}
+                        .st10{fill:url(#SVGID_3_);}
+                        .st11{fill:#FF004F;}
+                        .st12{fill:#00F7EF;}
+                        .st13{fill:#5181B8;}
+                        .st14{fill:#395976;}
+                        .st15{fill:#F58220;}
+                        .st16{fill:#E6162D;}
+                        .st17{fill:#FF9933;}
+                        </style><g id="guidlines"/><g id="FB"/><g id="ig"/><g id="yt"/><g id="twitter"/><g id="snapchat"/><g id="WA"/><g id="Pinterrest"/><g id="Layer_9"/><g id="Layer_10"/><g id="Layer_11"><path class="st13" d="M4,13.9c2.1,0,5.3,0,7.1,0c0.9,0,1.6,0.6,1.9,1.4c0.9,2.6,2.9,8.3,5.2,12.2c3.1,5.1,5.1,7,6.4,6.8   c1.3-0.3,0.9-3.7,0.9-6.4s0.3-7.3-1-9.4l-2-2.9c-0.5-0.7,0-1.6,0.8-1.6h11.4c1.1,0,2,0.9,2,2v14.5c0,0,0.5,2.6,3.3-0.1   c2.8-2.7,5.8-7.7,8.3-12.8l1-2.4c0.3-0.7,1-1.2,1.8-1.2h7.4c1.4,0,2.4,1.4,1.9,2.7l-0.8,2.1c0,0-2.7,5.4-5.5,9.2   c-2.8,3.9-3.4,4.8-3,5.8c0.4,1,7.6,7.7,9.4,10.9c0.5,0.9,0.9,1.7,1.3,2.4c0.7,1.3-0.3,3-1.8,3l-8.4,0c-0.7,0-1.4-0.4-1.7-1   l-0.8-1.3c0,0-5.1-6-8.2-7.9c-3.2-1.8-3.1,0.8-3.1,0.8v5.3c0,2.2-1.8,4-4,4h-2c0,0-11,0-19.8-13.1C5.1,26.7,2.8,20.1,2,16.3   C1.8,15.1,2.7,13.9,4,13.9z"/></g><g id="Layer_12"/><g id="Layer_13"/><g id="Layer_14"/><g id="Layer_15"/><g id="Layer_16"/><g id="Layer_17"/></svg>
+                    </a>
+                    <a href="#">
+                        <svg class="contacts__svg tg" xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Telegram" role="img"
+                        viewBox="0 0 512 512"><rect
+                        width="512" height="512"
+                        rx="15%"
+                        fill="#37aee2"/><path fill="#c8daea" d="M199 404c-11 0-10-4-13-14l-32-105 245-144"/><path fill="#a9c9dd" d="M199 404c7 0 11-4 16-8l45-43-56-34"/><path fill="#f6fbfe" d="M204 319l135 99c14 9 26 4 30-14l55-258c5-22-9-32-24-25L79 245c-21 8-21 21-4 26l83 26 190-121c9-5 17-3 11 4"/></svg>
+                    </a>
+                    <a href="">
+                        <svg class="contacts__svg inst" enable-background="new 0 0 512 512" id="Layer_1" version="1.1" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M505,257c0,34.8-0.7,69.7,0.2,104.5c1.5,61.6-37.2,109.2-86.5,130.4c-19.8,8.5-40.6,13-62.1,13c-67.3,0.1-134.7,1-202-0.3   c-50.7-1-92.4-22.2-122.3-64c-15.7-22-23.2-47-23.2-74.1c0-71.7,0-143.3,0-215c0-58.5,28.5-99.4,79.1-126C110.2,14,134.1,9.1,159,9   c65.3,0,130.7-0.4,196,0.2c50.7,0.4,93,19.8,124.2,60.6c17.4,22.8,25.8,49,25.8,77.8C505,184,505,220.5,505,257z M46,257   c0,36.7,0,73.3,0,110c0,16.4,3.8,31.8,12.3,45.7c22.3,36.5,56,54.3,97.8,55c67.1,1,134.3,0.4,201.5,0.2c16.5,0,32.5-3.4,47.4-10.5   c40.6-19.4,63.3-50.3,63.1-96.7c-0.4-71-0.1-142-0.1-213c0-20.1-5.7-38.5-17.6-54.7c-23-31.1-54.8-46.4-92.8-46.8   c-67-0.8-134-0.3-201-0.2c-14.3,0-28.1,2.9-41.5,7.9c-36.8,13.7-71,48.4-69.4,99.5C46.9,188,46,222.5,46,257z"/><path d="M257.6,363c-64.5,0-116.5-51.4-116.6-115.4c-0.1-63,52.3-114.6,116.4-114.6c64.3-0.1,116.5,51.4,116.6,114.9   C374,311.3,321.9,362.9,257.6,363z M257.6,326c43.9,0,79.5-35.1,79.4-78.3c-0.1-42.8-35.7-77.8-79.4-77.8   c-43.9,0-79.7,34.9-79.7,78C178,291.1,213.7,326.1,257.6,326z"/><path d="M387.5,98c13.5,0,24.5,11.5,24.5,25.6c-0.1,14.1-11.2,25.5-24.7,25.4c-13.3-0.1-24.2-11.5-24.2-25.3   C363,109.6,374,98,387.5,98z"/></g></svg>
+                    </a>
+                </div>
+            </div>
+            <nav class="footer_menus">
+                <div class="footer__block menu1">
+                    <h4 class="block__title">Меню</h4>
+                    <a href="#" class="block__item">Главная</a>
+                    <a href="#" class="block__item">Графики</a>
+                    <a href="#" class="block__item">Фьючерсы</a>
+                    <a href="#" class="block__item">О нас</a>
+                </div>
+                <div class="footer__block menu2">
+                    <h4 class="block__title">Поддержка</h4>
+                    <a href="#" class="block__item">Пользовательское соглашения</a>
+                    <a href="#" class="block__item">Политика конфеденциальности</a>
+                    <a href="#" class="block__item">Связаться с нами</a>
+                    <a href="#" class="block__item">FAQ</a>
+                </div>
+            </nav>
+            <div class="footer__block download">
+                <a href="#" class="footer__link"><img src="images/appstore.svg" alt="скачать gonance из AppStore" class="footer__image"></a>
+                <a href="#" class="footer__link"><img src="images/google_play.png" alt="скачать gonance из Google Play" class="footer__image"></a>
+            </div>
+        </div>
+    </footer>
+<script src="js/main.js"></script>
+</body>
+</html>
