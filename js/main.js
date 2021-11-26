@@ -32,42 +32,46 @@ document.addEventListener("DOMContentLoaded", function() {
             
         });
     };
+    const profile = document.querySelector('.right__element.profile')
+    const burger = document.querySelector('.burger');
+    const navigation = document.querySelector('#top__nav');
+    const header = document.querySelector('header');
+    const body = document.querySelector('body');
+    burger.addEventListener('click', function(){
+        navigation.classList.toggle('active');
+        profile.classList.remove('pactive')
+        burger.classList.toggle('active');
+        header.classList.toggle('active');
+        body.classList.toggle('ovhidden');
+    })
 
-const burger = document.querySelector('.burger');
-var navigation = document.querySelector('#top__nav');
-burger.addEventListener('click', function(){
-    navigation.classList.toggle('active');
-    burger.classList.toggle('active');
-})
+    const arrow_menu = document.querySelector('.profile__cont');
+    arrow_menu.addEventListener('click', function(){
+        profile.classList.toggle('pactive');
+    })
 
-const arrow_menu = document.querySelector('.profile__cont');
-const profile = document.querySelector('.profile');
-arrow_menu.addEventListener('click', function(){
-    profile.classList.toggle('pactive');
-})
-
-const socials = document.querySelectorAll('.block__social');
-socials.forEach(element => {
-    const button = element.querySelector('.share__img')
-    const nav = element.querySelector('.share__modal') 
-    const linkshare = element.querySelector('.share__link')
-    document.addEventListener('click', e => { 
-        const target = e.target
-        if (nav.classList.contains('shactive')){
-            if(target != nav && target != linkshare && nav.classList.contains('shactive') ){
-                nav.classList.remove('shactive');
+    const socials = document.querySelectorAll('.block__social');
+    socials.forEach(element => {
+        const button = element.querySelector('.share__img')
+        const nav = element.querySelector('.share__modal') 
+        const linkshare = element.querySelector('.share__link')
+        document.addEventListener('click', e => { 
+            const target = e.target
+            if (nav.classList.contains('shactive')){
+                if(target != nav && target != linkshare && nav.classList.contains('shactive') ){
+                    nav.classList.remove('shactive');
+                }
+            }else if(target==button){
+                nav.classList.add('shactive');
+                console.log(linkshare.getAttribute('link-attr'));
+                linkshare.value = linkshare.getAttribute('link-attr');
+                linkshare.select();
             }
-        }else if(target==button){
-            nav.classList.add('shactive');
-            console.log(linkshare.getAttribute('link-attr'));
-            linkshare.value = linkshare.getAttribute('link-attr');
-            linkshare.select();
-        }
-    })
-    element.querySelector('.share__link-copy').addEventListener('click', function(){
-        navigator.clipboard.writeText(linkshare.getAttribute('link-attr'));
-    })
-});
+        })
+        element.querySelector('.share__link-copy').addEventListener('click', function(){
+            navigator.clipboard.writeText(linkshare.getAttribute('link-attr'));
+        })
+    });
 
 
     var littleSliders = document.querySelectorAll('.under__slider');
@@ -110,7 +114,24 @@ socials.forEach(element => {
             textpp.classList.remove('active-input')
             textpp.classList.add('nonactive-input');
         }
-
-
     })
+
+    var win = window,
+    $logo = document.getElementById('header'),
+    analytics = document.querySelector('.analytics').getBoundingClientRect().top;
+    if (analytics <= 61){
+        $logo.classList.add('scrolled')
+    }
+    else{
+        $logo.classList.remove('scrolled')
+    }
+    win.onscroll = function(){
+        analytics = document.querySelector('.analytics').getBoundingClientRect().top;
+        if (analytics <= 61){
+            $logo.classList.add('scrolled')
+        }
+        else{
+            $logo.classList.remove('scrolled')
+        }
+    };
 });
