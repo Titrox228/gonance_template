@@ -6,7 +6,7 @@
     flex: 1 1 auto;
 }
 .article{
-    width: 100vw;
+    width: 100%;
     padding: 0 5vh;
     padding-bottom: 5vh;
     min-height: 100vh;
@@ -176,13 +176,12 @@ a.graphic:active .under__slider{
 .analytics{
     background-color: white;
     width: 100%;
-    padding: 0 5vh;
+    padding: 5vh;
 }
 .analytics__title{
     color: black;
     font-size: 40px;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 .analytics__blocks{
     display: grid;
@@ -203,6 +202,14 @@ a.graphic:active .under__slider{
     font-weight: bold;
     line-height: 120%;
     margin-bottom: 5px;
+}
+.analytics__block-title a{
+    display: block;
+    color: black;
+    line-height: 130%;
+}
+.analytics__block-title a:hover{
+    text-decoration: underline;
 }
 .block__itemname{
     font-size: 16px;
