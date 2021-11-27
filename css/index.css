@@ -354,6 +354,7 @@ a.graphic:active .under__slider{
     transition: 0.2s all ease;
 }
 .share__link-copy{
+    display: block;
     cursor: pointer;
     width: 25px;
     height: 25px;
