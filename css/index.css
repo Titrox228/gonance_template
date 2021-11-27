@@ -402,11 +402,10 @@ a.graphic:active .under__slider{
 }
 .share__btn-fake{
     background-color: transparent;
-    border: 1px solid black;
+    border: none;
     display: block;
     width: 25px;
     height: 25px;
-    z-index: 10000000;
     position: absolute;
     cursor: pointer;
     right: 10px;
