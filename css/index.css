@@ -401,13 +401,16 @@ a.graphic:active .under__slider{
     fill: #608AF5;
 }
 .share__btn-fake{
+    background-color: transparent;
+    border: 1px sold black;
     display: block;
     width: 25px;
     height: 25px;
-    z-index: 100;
+    z-index: 10000000;
     position: absolute;
     cursor: pointer;
     right: 10px;
+    padding: 0;
 }
 .share__link-copy{
     width: 25px;
