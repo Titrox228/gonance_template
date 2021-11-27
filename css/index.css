@@ -353,13 +353,6 @@ a.graphic:active .under__slider{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     transition: 0.2s all ease;
 }
-.share__link-copy{
-    display: block;
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    margin-right: 10px;
-}
 .share__link-copy:hover path{
     fill: rgb(51, 51, 51);
 }
@@ -436,7 +429,24 @@ a.graphic:active .under__slider{
         justify-content: space-between;
     }
 }
+.share__btn-fake{
+    display: block;
+    width: 25px;
+    height: 25px;
+    z-index: 100;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+}
+.share__link-copy{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    pointer-events: none;
+    cursor: none;
+}
 @media(max-width:1040px){
+
     .article:before{
         background: url('../images/backmob.jpg') no-repeat center top;
     }

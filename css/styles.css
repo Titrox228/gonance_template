@@ -442,7 +442,7 @@ footer::before{
     margin: 15px;
 }
 @media(max-width:1040px){
-    
+
     header{
         transition: 0.1s all ease;
     }
@@ -574,6 +574,7 @@ footer::before{
         justify-content: flex-start;
         gap: 10px;
         transition: 0.1s all ease-out;
+        pointer-events: none;
     }
     .first{
         order: 1;
@@ -593,6 +594,7 @@ footer::before{
         transform: translate(0px, -2px);
         opacity: 1;
         transition: 0.1s all ease-in;
+        pointer-events: all;
     }
     header{
         width: 100%;

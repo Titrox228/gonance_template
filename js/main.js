@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 linkshare.select();
             }
         })
-        element.querySelector('.share__link-copy').addEventListener('click', function(){
+        element.querySelector('.share__btn-fake').addEventListener('click', function(){
             navigator.clipboard.writeText(linkshare.getAttribute('link-attr'));
         })
     });
