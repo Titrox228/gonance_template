@@ -37,12 +37,18 @@ document.addEventListener("DOMContentLoaded", function() {
     const navigation = document.querySelector('#top__nav');
     const header = document.querySelector('header');
     const body = document.querySelector('body');
-    burger.addEventListener('click', function(){
+    burger.addEventListener('click', function(e){
         navigation.classList.toggle('active');
         profile.classList.remove('pactive')
         burger.classList.toggle('active');
         header.classList.toggle('active');
         body.classList.toggle('ovhidden');
+        if(body.classList.contains('ovhidden')){
+            document.ontouchmove = function(event){
+                e.preventDefault();
+                console.log('PREVENTED');
+            }
+        }
     })
 
     const arrow_menu = document.querySelector('.profile__cont');
