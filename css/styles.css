@@ -41,6 +41,7 @@ body.ovhidden{
     position: absolute;
     order: 2;
     z-index: 12;
+    overflow: hidden;
 }
 .top__nav.active
 .scrolled{
@@ -442,7 +443,6 @@ footer::before{
     margin: 15px;
 }
 @media(max-width:1040px){
-
     header{
         transition: 0.1s all ease;
     }
@@ -595,6 +595,7 @@ footer::before{
         opacity: 1;
         transition: 0.1s all ease-in;
         pointer-events: all;
+        position: fixed; 
     }
     header{
         width: 100%;
