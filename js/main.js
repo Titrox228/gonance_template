@@ -50,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
     })
-
     const arrow_menu = document.querySelector('.profile__cont');
     arrow_menu.addEventListener('click', function(){
         profile.classList.toggle('pactive');
