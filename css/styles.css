@@ -693,6 +693,10 @@ footer::before{
         gap: 0px;
     }
 }
-/* .workarea{
-    display: none!important;
-} */
+.workarea{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    flex: 1 1 auto;
+}

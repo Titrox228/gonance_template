@@ -1,8 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById('auth').onclick = function() {
-        document.getElementById('authent').classList.add('active-modal');
-    }
 
+document.addEventListener("DOMContentLoaded", function() {
     var likes = document.querySelectorAll(".block__like");
     for (let i = 0; i < likes.length; i++) {
         likes[i].addEventListener("click", function() {
@@ -32,28 +29,6 @@ document.addEventListener("DOMContentLoaded", function() {
             
         });
     };
-    const profile = document.querySelector('.right__element.profile')
-    const burger = document.querySelector('.burger');
-    const navigation = document.querySelector('#top__nav');
-    const header = document.querySelector('header');
-    const body = document.querySelector('body');
-    burger.addEventListener('click', function(e){
-        navigation.classList.toggle('active');
-        profile.classList.remove('pactive')
-        burger.classList.toggle('active');
-        header.classList.toggle('active');
-        body.classList.toggle('ovhidden');
-        if(body.classList.contains('ovhidden')){
-            document.ontouchmove = function(event){
-                e.preventDefault();
-                console.log('PREVENTED');
-            }
-        }
-    })
-    const arrow_menu = document.querySelector('.profile__cont');
-    arrow_menu.addEventListener('click', function(){
-        profile.classList.toggle('pactive');
-    })
 
     const socials = document.querySelectorAll('.block__social');
     socials.forEach(element => {
@@ -78,7 +53,6 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     });
 
-
     var littleSliders = document.querySelectorAll('.under__slider');
     var iter = 0;
     var timeOut = 3000;
@@ -94,32 +68,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }, timeOut);
         iter += 1;
     });
-
-    document.addEventListener('click', function(e){
-        const target = e.target;
-        const textL = target == document.getElementById('login');
-        const textll = document.getElementById('login');
-        const textP = target == document.getElementById('pass');
-        const textpp = document.getElementById('pass');
-
-        if(textL || textll.value!=0){
-            textll.classList.remove('nonactive-input');
-            textll.classList.add('active-input');
-
-        }else if(textll.value==0){
-            textll.classList.remove('active-input')
-            textll.classList.add('nonactive-input');
-        }
-
-        if(textP || textpp.value!=0){
-            textpp.classList.remove('nonactive-input');
-            textpp.classList.add('active-input');
-
-        }else if(textpp.value==0){
-            textpp.classList.remove('active-input')
-            textpp.classList.add('nonactive-input');
-        }
-    })
 
     var win = window,
     $logo = document.getElementById('header'),
