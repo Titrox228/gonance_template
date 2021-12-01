@@ -9,9 +9,14 @@ a{
     flex-direction: row;
 }
 .graphics{
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.26);
     width: 75%;
     z-index: 5;
+    -webkit-box-shadow: 0px 2px 19px -10px rgba(34, 60, 80, 0.48);
+    -moz-box-shadow: 0px 2px 19px -10px rgba(34, 60, 80, 0.48);
+    box-shadow: 0px 2px 19px -10px rgba(34, 60, 80, 0.48);
+    border-radius: 20px;
+    padding: 10px 8px;
 }
 .search__form{
     position: relative;
@@ -59,7 +64,7 @@ a{
 }
 .search__form:hover .search__input{
     display: block;
-    border-color: black;
+    border-color: rgba(128, 128, 128, 0.226);
 }
 .search__form:hover .fa{
     background: #07051a;
@@ -261,12 +266,13 @@ a.graphic__title:hover{
 .pagination__button{
     display: flex;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     background-color: white;
     border: 1px solid rgb(163, 163, 163);
     border-radius: 5px;
     text-align: center;
+    transition: 0.2s all ease;
 }
 .pagination__pages{
     display: flex;
@@ -280,3 +286,58 @@ a.graphic__title:hover{
     padding-top: 2px;
     line-height: 100%;
 }
+.pagination__arrow{
+    margin: 0 auto;
+    width: 13px;
+    text-align: center;
+}
+.pagination__arrow.left{
+    transform: rotate(90deg);
+}
+.pagination__arrow.right{
+    transform: rotate(-90deg);
+}
+.pagination__button.current{
+    background-color: black;
+    border-color: transparent;
+    color: white;
+}
+.pagination__button:hover{
+    background-color: black;
+    color: white;
+}
+.pagination__button.current:hover{
+    background-color: rgba(128, 128, 128, 0.671);
+}
+.pagination__button.dots{
+    border-color: transparent;
+    align-items: flex-end;
+}
+.pagination__button.dots:hover{
+    background-color: transparent;
+    pointer-events: none;
+    color: black;
+}
+.pagination__button.dots .pagination__number{
+    cursor: default;
+}
+.pagination__arrow{
+    transition: 0.2s all ease;
+}
+.pagination__button:hover .pagination__arrow path{
+    fill: white;
+}
+.pagination__button:active{
+    background-color: rgba(0, 0, 0, 0.712);
+}
+.pagination__button.current:active{
+    background-color: rgba(0, 0, 0, 0.712);
+}
+.shadow{
+    box-shadow: none;
+}
+.top__nav{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.137);
+}
+
+
