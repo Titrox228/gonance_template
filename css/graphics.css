@@ -265,10 +265,11 @@ a.graphic__link:active svg path,
     flex-direction: row;
     color: black;
 }
-
 a.graphic__title:hover{
     cursor: pointer;
-    color: black;
+}
+a.graphic__title:hover .graphic__name{
+    cursor: pointer;
     text-decoration: underline;
 }
 
