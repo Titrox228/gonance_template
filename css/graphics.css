@@ -11,9 +11,9 @@ a{
 .graphics{
     width: 100%;
     z-index: 5;
-    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.226);;
-    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.226);;
-    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.226);
+    -webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    -moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
     border-radius: 20px;
     padding: 10px 13px;
     background-color: white;
@@ -133,10 +133,11 @@ a{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid rgba(128, 128, 128, 0.226);
+    padding-bottom: 8px;
 }
 .graphic{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
@@ -181,7 +182,9 @@ a{
     color: grey;
 }
 .graphic__percent{
-    display: block;
+    display: inline;
+    margin: 0 auto;
+    width: 60px;
 }
 .grey-block,
 .red-block,
@@ -190,7 +193,7 @@ a{
     color: white;
     padding: 7px;
     padding-top: 9px;
-    border-radius: 5px;
+    border-radius: 3px;
     line-height: 100%;
 }
 .red-block{
@@ -217,6 +220,9 @@ a{
     font-size: 28px;
     display: block;
     padding: 10px;
+}
+.graphic__link svg{
+    margin: 0 auto;
 }
 a.graphic__link:active svg path,
 .graphic__link svg path{
@@ -342,6 +348,10 @@ header{
     background-color: white;
     border-bottom: 1px solid rgba(128, 128, 128, 0.137);    
 }
+.percent__wrapper{
+    display: flex;
+    justify-content: center;
+}
 .burger,
 .burger:before,
 .burger:after{
@@ -358,8 +368,53 @@ header{
     color: black;
 }
 .right__element.box:hover{
-    background-color: black;
-    
+    background-color: black; 
+}
+.graphic__link-title{
+    text-align: center;
+}
+@media(max-width:1065px){
+    .empty,
+    .no-mobile,
+    .graphic__image,
+    .graphic__favourite{
+        display: none;
+    }
+    .graphic{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
 
-
+@media(max-width: 800px){
+    .graphic .graphic__title{
+        justify-content: left;
+    }
+    .graphic{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .graphic *{
+        font-size: 18px;
+    }
+    .graphic__link-title,
+    .graphic__link{
+        display: none;
+    }
+}
+@media(max-width:493px){
+    .graphic *{
+        font-size: 16px;
+    }
+    .graphic__price{
+        min-width: 100px;
+    }
+    .graphic .graphic__title{
+        min-width: 130px;
+    }
+    .graphic__percent{
+        min-width: 70px;
+        width: auto;
+        text-align: center;
+        margin-left: auto;
+    }
+    .graphic__percent
+}
