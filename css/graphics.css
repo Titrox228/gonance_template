@@ -390,7 +390,7 @@ header{
         justify-content: left;
     }
     .graphic{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 0.55fr;
     }
     .select *,
     .graphic *{
@@ -441,6 +441,6 @@ header{
         width: 20px;
     }
     .workarea__wrapper {
-        margin-top: 31px;
+        margin-top: 0;
+        padding-top: 59px;
     }
-}
