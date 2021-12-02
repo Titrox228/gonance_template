@@ -392,6 +392,7 @@ header{
     .graphic{
         grid-template-columns: 1fr 1fr 1fr;
     }
+    .select *,
     .graphic *{
         font-size: 18px;
     }
@@ -401,6 +402,7 @@ header{
     }
 }
 @media(max-width:493px){
+    .select *,
     .graphic *{
         font-size: 16px;
     }
@@ -416,5 +418,29 @@ header{
         text-align: center;
         margin-left: auto;
     }
-    .graphic__percent
+    .graphics{
+        padding: 10px 0;
+        border-radius: 0px;
+        -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+        -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+        box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+    }
+    .workarea__wrapper{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .graphics__filter{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .pagination__button{
+        width: 35px;
+        height: 35px;
+    }
+    .dots{
+        width: 20px;
+    }
+    .workarea__wrapper {
+        margin-top: 31px;
+    }
 }
