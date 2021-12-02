@@ -336,10 +336,30 @@ a.graphic__title:hover{
     background-color: rgba(0, 0, 0, 0.712);
 }
 .shadow{
-    box-shadow: none;
+    display: none;
 }
-.top__nav{
-    border-bottom: 1px solid rgba(128, 128, 128, 0.137);
+header{
+    background-color: white;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.137);    
+}
+.burger,
+.burger:before,
+.burger:after{
+    background-color: #000000;
+}
+.right__element.box{
+    border-color: black;
+}
+.right__element.box .r_element,
+.right__element .r_element{
+    color: rgb(75, 75, 75);
+}
+.right__element:hover .r_element{
+    color: black;
+}
+.right__element.box:hover{
+    background-color: black;
+    
 }
 
 
