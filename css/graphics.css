@@ -156,7 +156,7 @@ a{
 }
 .graphic .graphic__title{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     min-width: 170px;
     justify-content: center;
 }
@@ -164,12 +164,13 @@ a{
     color: rgb(163, 163, 163);
     display: block;
 }
-.graphic__currency:before{
+/* .graphic__currency:before{
     content: '/';
     color: black;
-}
+} */
 .graphic__currency{
-    color: rgb(163, 163, 163);
+    color: rgb(44, 44, 44);
+    font-style: italic;
 }
 .graphic *{
     display: block;
@@ -213,7 +214,15 @@ a{
     height: 30px;
     position: relative;
 }
-
+.graphic__name.stattrack{
+    color: rgb(207, 106, 50)
+}
+.graphic__name.souvenir{
+    color: rgb(204, 173, 0);
+}
+.graphic__name.knife{
+    color: rgb(134, 80, 172);
+}
 .graphic__favourite.is-active{
     filter: saturate(1);
 }
@@ -256,9 +265,7 @@ a.graphic__link:active svg path,
     flex-direction: row;
     color: black;
 }
-.graphic__title{
-    display: block;
-}
+
 a.graphic__title:hover{
     cursor: pointer;
     color: black;
