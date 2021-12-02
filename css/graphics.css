@@ -405,6 +405,7 @@ header{
     }
 }
 @media(max-width:493px){
+    .graphic:not(.tab):hover,
     .graphic:not(.tab):active{
         background-color: rgba(128, 128, 128, 0.164);
     }
